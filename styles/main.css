@@ -1,0 +1,4 @@
+/* Padding, Border sind dadurch in der gesamten Höhe und Breite des Elementen miteinbegriffen. Hier wurde es für alle Elemente Übernommen */
+* {
+  box-sizing: border-box;
+}
