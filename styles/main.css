@@ -1,4 +1,180 @@
 /* Padding, Border sind dadurch in der gesamten Höhe und Breite des Elementen miteinbegriffen. Hier wurde es für alle Elemente Übernommen */
 * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+}
+/* Handys*/
+[class*="col-"] {
+  width: 100%;
+}
+/*Tablets*/
+@media only screen and (min-width: 600px) {
+  .col-s-0 {width: 4.165%;}
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+/*Computer*/
+@media only screen and (min-width: 768px) {
+  .col-0 {width: 4.165%;}
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+header {
+  clear: both;
+  text-align: center;
+}
+
+header h1 {
+  padding: 1.5em 0.5em;
+  color: white;
+  font-size: 3em;
+}
+
+nav {
+  /*position: -webkit-sticky; Für Safari
+  position: sticky;
+  top: 0;*/
+  z-index: 1;
+}
+
+nav ul {
+  /*position: sticky;
+  top:0;*/
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(111, 99, 121);
+}
+
+nav li {
+  float: right;
+}
+
+nav li a {
+  display: block;
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  /*padding: 1em;
+  font-size: 1.3em;*/
+  padding: 0.5em 0;
+  font-size: 1em;
+}
+
+nav a:hover {
+  background-color: #111;
+}
+
+.active {
+  color: white;
+  background-color: rgb(47, 255, 64, 0.7);
+}
+
+/* Damit der Container dem Bild angeglichen wird*/
+.clearfix {
+    overflow: auto;
+}
+
+a.button-cust {
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 1em 0.5em;
+    margin-top: 1em;
+    position:absolute;
+    top:50%;
+    right:50%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    transform:translateX(50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7em;
+}
+
+a.button-cust:hover {
+  background-color: rgba(128, 128, 128, 0.747);
+  color: white;
+  border: none;
+}
+
+p q{
+  text-align: center;
+  padding: 5em;
+  font-family: 'Lobster', cursive;
+  position: absolute;
+  top: 100%;
+  -webkit-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  -moz-transform: translateY(-25%);
+  transform: translateY(-25%)
+}
+
+/*.button-cust
+{
+  text-decoration: none;
+  background-color: slateblue;
+  padding: 1em 0.5em;
+}*/
+
+/*nav {
+  position: sticky;
+  background-color: rgb(111, 99, 121);
+  height: 3.75em;
+}
+
+nav ul {
+  text-align: right;
+  background-color: rgb(111, 99, 121);
+}
+
+nav li{
+  padding:1.3em;
+  display: inline-block;
+  color: white;
+}
+
+nav a{
+  background-color: rgb(111, 99, 121);
+  text-decoration: none;
+  color: white;
+  padding: 1.3em;
+  float: right;
+}
+
+Elemente sollen in Bunten Farben aufleuchten
+nav a:hover{
+  background-color: black;
+}*/
+
+footer{
+  background-color: slategrey;
+  color: white;
+  padding: 5em;
+  font-size: 0.5em;
+  clear: both;
 }
