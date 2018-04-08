@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title></title>
+    <style>
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: rgb(111, 99, 121);
+            padding: 0;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color:white;
+            text-align: center;
+            text-decoration: none;
+            /*padding: 1em;
+            font-size: 1.3em;*/
+            padding: 0.5em 0;
+            font-size: 1em;
+        }
+
+        a:hover {
+        background-color: #111;
+        }
+        @media only screen and (min-width: 424px) {
+            li a {font-size: 1.5em; padding: 0.5em;}
+        }
+
+        @media only screen and (min-width:768px) {
+            li a {font-size: 1.505em; padding: 0.8em;}
+        }
+
+        @media only screen and (min-width:1024px) {
+            li a {padding: 1em; font-size: 1.3em;}
+        }
+    </style>
+</head>
+<body>
+        <!--Navigationsleiste als IFrame zu verwenden versuchen-->
+        <!-- idee ist gescheitert -->
+        <ul class="col-12">
+            <li class="col-2">
+                <a href="#Container-Aktuelles">Aktuelles</a>
+            </li>
+            <li class="col-2">
+                <a href="#Container-Soziales">Soziales</a>
+            </li>
+            <li class="col-2">
+                <a href="#Container-Wirtschaft">Wirtschaft</a>
+            </li>
+            <li class="col-2">
+                <a href="#Container-Parteien">Parteien</a>
+            </li>
+            <li class="col-2">
+                <a href="Demokratie.html">Demokratie</a>
+            </li>
+            <li style="float:left" class="active col-2">
+                <a href="index.html">
+                    <i class="material-icons" style="font-size: 19px">home</i>
+                </a>
+            </li>
+        </ul>
+</body>
+</html>

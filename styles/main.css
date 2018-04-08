@@ -42,50 +42,66 @@
   .col-12 {width: 100%;}
 }
 
-header {
-  clear: both;
+header h1 {
   text-align: center;
+  padding: 2em 4em;
+  font-size: 2em;
+  color: black;
 }
 
-header h1 {
-  padding: 1.5em 0.5em;
-  color: white;
-  font-size: 3em;
+/*Navigation korrigieren*/
+/*nav, nav iframe {
+  max-height: 65.95px;
 }
 
 nav {
-  /*position: -webkit-sticky; Für Safari
-  position: sticky;
-  top: 0;*/
+  z-index: 1;
+}
+
+nav iframe {
+  overflow: hidden;
+  width: 100%;
+  border: none;
+}*/
+nav {
   z-index: 1;
 }
 
 nav ul {
-  /*position: sticky;
-  top:0;*/
-  list-style-type: none;
-  padding: 0;
+  list-style-type: none;    
   overflow: hidden;
   background-color: rgb(111, 99, 121);
+}
+
+nav ul, .Side-Navigation ul {
+  padding: 0;
 }
 
 nav li {
   float: right;
 }
 
-nav li a {
+nav a {
+  padding: 0.5em 0;
+  font-size: 1em;
+}
+
+.Side-Navigation a{
+  padding:1em 0.5em;
+  font-size: medium;
+}
+
+nav a, .Side-Navigation a {
   display: block;
   color:white;
   text-align: center;
   text-decoration: none;
   /*padding: 1em;
   font-size: 1.3em;*/
-  padding: 0.5em 0;
-  font-size: 1em;
 }
 
-nav a:hover {
-  background-color: #111;
+  nav a:hover , .Side-Navigation a:hover{
+    background-color: #111;
 }
 
 .active {
@@ -98,83 +114,132 @@ nav a:hover {
     overflow: auto;
 }
 
-a.button-cust {
-    color: white;
-    background-color: rgba(255, 255, 255, 0);
-    border: 1px solid white;
-    text-decoration: none;
-    padding: 1em 0.5em;
-    margin-top: 1em;
-    position:absolute;
-    top:50%;
-    right:50%;
-    -webkit-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    -moz-transform: translateY(50%);
-    transform:translateX(50%);
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.7em;
+.Side-Navigation {
+  float: left;
+  clear: none;
+  position: relative;
+}
+.Main-Content {
+  margin: 0;
+  position: relative;
+  float: left;
 }
 
-a.button-cust:hover {
-  background-color: rgba(128, 128, 128, 0.747);
-  color: white;
-  border: none;
+.Side-Navigation ul{
+  list-style-type: none;
+  overflow: auto;
+  background-color: salmon;
 }
 
-p q{
+article p {
+  padding: 0 5em;
+  text-align: justify;
+}
+
+/*Modal*/
+/* Auf eine genauere Beschreibung Achten */
+/* .modal-image {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-image:hover {
+  opacity: 0.5;
+}
+
+.modal {
+  display: none;
+  position:fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  overflow: auto;
+  background-color: #000;
+  background-color: rgb(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 700px;
+}
+
+.caption {
+  margin:auto;
+  display:block;
   text-align: center;
-  padding: 5em;
-  font-family: 'Lobster', cursive;
-  position: absolute;
-  top: 100%;
-  -webkit-transform: translateY(-25%);
-  -ms-transform: translateY(-25%);
-  -moz-transform: translateY(-25%);
-  transform: translateY(-25%)
+  width: 80%;
+  max-width: 700px;
+  color: #ccc;
+  padding: 10px 0;
 }
 
-/*.button-cust
-{
-  text-decoration: none;
-  background-color: slateblue;
-  padding: 1em 0.5em;
-}*/
-
-/*nav {
-  position: sticky;
-  background-color: rgb(111, 99, 121);
-  height: 3.75em;
+.modal-content .caption {
+  -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
 
-nav ul {
-  text-align: right;
-  background-color: rgb(111, 99, 121);
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
 }
 
-nav li{
-  padding:1.3em;
-  display: inline-block;
-  color: white;
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-nav a{
-  background-color: rgb(111, 99, 121);
-  text-decoration: none;
-  color: white;
-  padding: 1.3em;
-  float: right;
-}
-
-Elemente sollen in Bunten Farben aufleuchten
-nav a:hover{
-  background-color: black;
-}*/
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+} */
 
 footer{
   background-color: slategrey;
-  color: white;
   padding: 5em;
   font-size: 0.5em;
+}
+
+header, footer {
+  color: white;
   clear: both;
+}
+
+@media only screen and (max-width: 700px){
+    /* .modal-content {
+        width: 100%;
+    } */
+}
+
+@media only screen and (min-width: 424px) {
+  /**/
+
+}
+
+@media only screen and (min-width:768px) {
+  /**/
+}
+
+@media only screen and (min-width:1024px) {
+  /**/
+  nav {top:0; position: -webkit-sticky; position: sticky;}
+  nav li a {padding: 1em; font-size: 1.3em;}
+  nav li {width: auto;}
 }

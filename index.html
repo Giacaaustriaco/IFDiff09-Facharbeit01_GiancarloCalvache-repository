@@ -5,6 +5,7 @@
     <title>POLITIK | Startseite</title>
     <!--Website passt sich der größe des Bildschirmes eines Gerätes an-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Hyperlink wird zur Haupt CSS-Datei erstellt-->
     <link rel="stylesheet" href="styles/main.css">
     <!-- Google Icons-->
@@ -21,69 +22,88 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dokdo|Inknut+Antiqua|Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive|Holtwood+One+SC|IM+Fell+DW+Pica+SC|Mate+SC|Scheherazade|Suez+One" rel="stylesheet">
     <style>
+      header h1 {
+        padding: 1.5em 0.5em;
+        color: white;
+        font-size: 3em;
+      }
       #Title-Image {
         /*background-color: rgba(130, 0, 206, 0.3);*/
-        background-image: url('images/ParlamentsGebäude.jpg');
+        background-image: url("images/Startseite/ParlamentsGebäude.jpg");
         background-repeat: no-repeat;
         font-family: 'Permanent Marker', cursive;
       }
-      /*Baustelle: Demokratie-Container*/
-      /*#Container-Demokratie {
-        height: 500px;
-        background-color:teal;
-        }
-        
-        #Container-Demokratie-Right {
-          background-color: goldenrod;
-          color: black;
-          //height:fit-content;
-          float: right;
-          height: inherit;
-        }
-        
-        #Container-Demokratie-Left {
-          background-image: url("images/images (4).jpg");
-          background-repeat: no-repeat;
-          background-color:rgb(92, 240, 240);
-          //height:fit-content;
-          float: left;
-          height: inherit;
-        }
-        
-        #Container-Demokratie-Left::after {
-          content: none;
-          float: none;
-        }*/
-        
-        /*#Container-Demokratie-Left {
-          background-image:url('images/images (1).jpg');
-          background-repeat:no-repeat;
-          text-align:center;
-          background-size:cover;
-        }*/
+      a.button-cust {
+        color: white;
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid white;
+        text-decoration: none;
+        padding: 1em 0.5em;
+        margin-top: 1em;
+        position:absolute;
+        top:50%;
+        right:50%;
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        transform:translateX(50%);
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.7em;
+      }
+
+      a.button-cust:hover {
+        background-color: rgba(128, 128, 128, 0.747);
+        color: white;
+        border: none;
+      }
+
+      .Container-Demokratie .Right p q {
+        text-align: center;
+        padding: 5em;
+        font-family: 'Lobster', cursive;
+        position: absolute;
+        top:50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: small;
+      }
+
+      .Flex-Container-Wrap {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+      }
+
+      .Flex-Child {
+        margin: auto;
+        background-color: tomato;
+        width: 33.33%;
+        height: 270px;
+        text-align: center;
+        line-height: 270px;
+      }
         
         .Container-Demokratie {
           height: 720px;
-          display: flex;
-          flex-wrap: wrap;
         }
 
         .Container-Demokratie .Left {
           height: inherit;
           position: relative;
           background-color: blanchedalmond;
-          background-image: url("images/maxresdefault.jpg");
-          /*z-index: -1;*/
-          /*background-image: url('images/images (1).jpg');*/
-          /*background-color: gray;*/
-          /*background-position: right, left;*/
-          /*background-repeat: no-repeat;*/
+          background-image: url("images/Startseite/maxresdefault.jpg");
         }
         
         .Container-Demokratie .Right {
+          background-color: bisque;
           justify-content: center;
           align-items: center;
+          vertical-align: middle;
         }
         
         .Container-Demokratie .Title {
@@ -107,26 +127,28 @@
           font-family: 'Oswald', sans-serif;
         }
         
-        /*.flex-image-row {
-          display: flex;
-          flex-wrap: wrap;
-          //height: 500px;
+        .Container-Parteien {
+          height:540px;
         }
-        
-        .flex-image-collum {
-          flex: 100%;
-          max-width: 100%;
+
+        .Container-Parteien .Right {
+          display: block;
+          position: relative;
+          text-align: center;
         }
-        
-        .flex-image-collum div {
-          background-image: url('images/ParlamentsGebäude.jpg');
-          vertical-align: middle;
-          width: 100%;
-        } */
-        
-        #Container-Parteien {
-          height:600px;
-          background-color:deeppink;
+
+        /* Dadurch wird kann des Hintergrungbild durchsichtig werden */
+        .Container-Parteien .Right::after {
+          content: "";
+          background: url('images/Startseite/Parteien.jpg');
+          background-repeat: no-repeat;
+          opacity: 0.5;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          z-index: -1;
         }
         
         #Container-Wirtschaft {
@@ -137,39 +159,42 @@
         #Container-Soziales {
           height: 470px;
         background-color: deepskyblue;
-      }
+        }
       
-      #Container-Aktuelles {
-        height:800px;
-        background-color:darkorchid;
-      }
+        #Container-Aktuelles {
+          height:800px;
+          background-color:darkorchid;
+        }
+        .Center-Container {
+            position: relative;
+            height: 100%;
+        }
+
+        .Absolute-Center {
+          width: 50%;
+          height: 50%;
+          overflow: auto;
+          margin: auto;
+          position: absolute;
+          top: 0; left: 0; bottom: 0; right: 0;
+        }
           @media only screen and (min-width: 424px) {
             header h1 {font-size: 5em;}
-            nav li a {font-size: 1.5em; padding: 0.5em;}
+            .Container-Demokratie .Right p q {font-size: small;}
           }
     
            @media only screen and (min-width: 768px) {
              header h1 {font-size: 7em;}
-             p q {
-               top:75%;
-              -webkit-transform: translateX(25%);
-              -ms-transform: translateX(25%);
-              -moz-transform: translateX(25%);
-              transform: translateY(25%);
+             .Container-Demokratie .Right p q {
+              font-size: medium;
              }
            }
            
            @media only screen and (min-width:1024px) {
              .col-2 {width: auto;}
              header h1 {font-size: 10em;}
-             nav li a {padding: 1em; font-size: 1.3em;}
-             nav {top:0; position: -webkit-sticky; position: sticky;}
-             p q {
-               top:100%;
-               -webkit-transform: translateX(25%);
-               -ms-transform: translateX(25%);
-               -moz-transform: translateX(25%);
-               transform: translateY(25%);
+             .Container-Demokratie .Right p q {
+               font-size: large;
               }
             }
       </style>
@@ -180,19 +205,36 @@
         <h1>POLITIK</h1>
       </div>
     </header>
+    <!--Navigation-->
+    <!-- <nav>
+      <iframe src="Navigation.html" frameborder="0"></iframe>
+    </nav> -->
     <nav>
-      <!--Navigationsleiste als IFrame zu verwenden versuchen-->
-      <ul>
-        <li class="col-2"><a href="#Container-Aktuelles">Aktuelles</a></li>
-        <li class="col-2"><a href="#Container-Soziales">Soziales</a></li>
-        <li class="col-2"><a href="#Container-Wirtschaft">Wirtschaft</a></li>
-        <li class="col-2"><a href="#Container-Parteien">Parteien</a></li>
-        <li class="col-2"><a href="#Container-Demokratie">Demokratie</a></li>
-        <li style="float:left" class="active col-2"><a href=""><i class="material-icons" style="font-size: 19px">home</i></a></li>
+      <ul class="col-12">
+        <li class="col-2">
+          <a href="#Container-Aktuelles">Aktuelles</a>
+        </li>
+        <li class="col-2">
+          <a href="#Container-Soziales">Soziales</a>
+        </li>
+        <li class="col-2">
+          <a href="#Container-Wirtschaft">Wirtschaft</a>
+        </li>
+        <li class="col-2">
+          <a href="Parteien.html">Parteien</a>
+        </li>
+        <li class="col-2">
+          <a href="Demokratie.html">Demokratie</a>
+        </li>
+        <li style="float:left" class="active col-2">
+          <a href="index.html">
+            <i class="material-icons" style="font-size: 19px">home</i>
+          </a>
+        </li>
       </ul>
     </nav>
     <main class="col-s-12 col-12">
-      <div class="Container-Demokratie">
+      <div class="Container-Demokratie Flex-Container-Wrap">
         <div class="Left" style="width: 50%;">
           <h1 class="Title">Demokratie!</h1>
           <h2 class="Title" style="margin-top:3em;">Von der <span style="font-family: 'Inknut Antiqua', serif;"> Antike </span>bis hin zur <span style="font-family: 'Orbitron', sans-serif;">Neuzeit</span></h2>
@@ -200,12 +242,30 @@
             Mehr erfahren
           </a>
         </div>
-        <div class="Right" style="width:50%;">
-          <p><q>Demokratie beruht auf drei Prinzipien: auf der Freiheit des Gewissens, aus der Freiheit der Rede und auf der Klugkeit, keine der Zwei in Anspruch zu nehmen</q></p>
+        <div class="Right Center-Container" style="width:50%;">
+          <div class="Absolute-Center" style="width:100%; font-size:xx-small;">
+            <p><q>Demokratie beruht auf drei Prinzipien: auf der Freiheit des Gewissens, aus der Freiheit der Rede und auf der Klugkeit, keine der Zwei in Anspruch zu nehmen</q></p>
+          </div>
         </div>
        </div>
-      <div id="Container-Parteien">
-        
+      <div class="Container-Parteien Flex-Container-Wrap">
+        <div class="Left" style="width:50%;">
+          <ul class="Flex-Container-Wrap" style="list-style-type:none; padding:0; margin:0;">
+            <li class="Flex-Child"><img src="" alt="">1</li>
+            <li class="Flex-Child"><img src="" alt="">2</li>
+            <li class="Flex-Child"><img src="" alt="">3</li>
+            <li class="Flex-Child"><img src="" alt="">4</li>
+            <li class="Flex-Child"><img src="" alt="">5</li>
+            <li class="Flex-Child"><img src="" alt="">6</li>
+          </ul>
+        </div>
+        <div class="Right" style="width:50%">
+          <div class="Center-Container">
+            <div class="Absolute-Center">
+              <h1 style="transform:translateY(50%);font-family:'Mate SC', serif; font-size:6em; ">Parteien</h1> <!--border:crimson 2px solid-->
+            </div>
+          </div>
+        </div>
       </div>
       <div id="Container-Wirtschaft">
       

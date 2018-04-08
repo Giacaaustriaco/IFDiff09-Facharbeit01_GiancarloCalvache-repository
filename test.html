@@ -6,17 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
+        .flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /* display: -webkit-box; */
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* -webkit-flex-flow: row wrap; */
+  flex-flow: row wrap;
+  /* justify-content: space-around; */
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: right;
 }
     </style>
 </head>
 <body>
-    <h1></h1>
-    <div><img src="images/images (2).jpg" alt=""></div>
-    
+    <div class="flex-container">
+        <ul style="width:50%">
+            <li class="flex-item" style="width:33.33%"><img src="images/AFD.png" alt="" style="max-width: 33.33%;"></li>
+            <li class="flex-item" style="width:33.33%"><img src="images/AFD.png" alt=""style="max-width: 33.33%;"></li>
+            <li class="flex-item" style="width:33.33%"><img src="images/AFD.png" alt=""style="max-width: 33.33%;"></li>
+            <li class="flex-item" style="width:33.33%"><img src="images/AFD.png" alt=""style="max-width: 33.33%;"></li>
+            <li class="flex-item" style="width:33.33%"><img src="images/AFD.png" alt=""style="max-width: 33.33%;"></li>
+            <li class="flex-item" style="width:33.33%"><img src="images/AFD.png" alt=""style="max-width: 33.33%;"></li>
+        </ul>
+    </div>
 </body>
 </html>
