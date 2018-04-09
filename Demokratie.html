@@ -8,103 +8,17 @@
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Demokratie</title>
-    <style>
-    #myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    }
-
-    #myImg:hover {opacity: 0.7;}
-
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    }
-
-    /* Modal Content (image) */
-    .modal-content {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-    }
-
-    /* Caption of Modal Image */
-    #caption {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        text-align: center;
-        color: #ccc;
-        padding: 10px 0;
-        height: 150px;
-    }
-
-    /* Add Animation */
-    .modal-content, #caption {    
-        -webkit-animation-name: zoom;
-        -webkit-animation-duration: 0.6s;
-        animation-name: zoom;
-        animation-duration: 0.6s;
-    }
-
-    @-webkit-keyframes zoom {
-        from {-webkit-transform: scale(0)} 
-        to {-webkit-transform: scale(1)}
-    }
-
-    @keyframes zoom {
-        from {transform: scale(0.1)} 
-        to {transform: scale(1)}
-    }
-
-    /* The Close Button */
-    .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 700px){
-        .modal-content {
-            width: 100%;
-        }
-    }
-    </style>
 </head>
 <body>
     <!-- Kopfnote -->
-    <header>
+    <header class="Main-Header">
         <h1>Demokratie</h1>
     </header>
     <!--Navigation-->
     <!-- <nav class="col-s-12 col-12">
         <iframe src="Navigation.html" frameborder="0"></iframe>
     </nav> -->
-    <nav>
+    <nav class="col-10">
         <ul class="col-12">
             <li class="col-2">
                 <a href="#Container-Aktuelles">Aktuelles</a>
@@ -130,12 +44,10 @@
     </nav>
     <main class="col-12">
         <div class="Side-Navigation col-2">
-            <ul>
-                <li><a href="#Definition-Demokratie">Definition</a></li>
-                <li><a href="#Demokratie-Antike">Demokratie in der Antike</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>                     
+            <a href="">Definition</a>
+            <a href="">Ursprünge der Demokratie</a>
+            <a href="">Reformen unter Solon</a>
+            <a href="">Reformen unter </a>
         </div>
 
         <div class="Main-Content col-10">
@@ -217,7 +129,7 @@
                 <!-- Ursprung der Demokratie bzw. des Demokratischen Denkens/attische Demokratie-->
                 <section id="Demokratie-Ursprung">
                     <!-- <h1></h1> -->
-                    <img src="images/Demokratie-Geschichte/GriechischeStämme.jpg" alt="Karte von Griechenland unterteilt in Griechischen Stämmen">
+                    <!-- <img src="images/Demokratie-Geschichte/GriechischeStämme.jpg" alt="Karte von Griechenland unterteilt in Griechischen Stämmen"> -->
                     <p>Demokratie hat seinen Ursprung im sechsten Jahrhundert v. Chr. In Athen. Die heutige Hauptstadt Griechenlands war damals
                     die größte Polis des antiken Griechenlands mit großem kulturellem und politischen Einfluss in der damaligen Welt. In der
                     historischen Forschung wird diese erste Form der Demokratie heute als „attische Demokratie“ bezeichnet, benannt nach dem
@@ -265,41 +177,10 @@
                     <p></p>
                 </section>
             </article>
-
-            <!-- <img id="myImg" src="images/Austria_Parlament_Front-Ausschnitt.jpg" alt="Österreichisches Parlament" width="300" height="200"> -->
-            
-            <!-- The Modal -->
-            <!-- <div id="myModal" class="modal">
-                <span class="close">×</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-            </div> -->
         </div>
     </main>
-    <footer>
+    <footer class="Main-Footer">
 
     </footer>
 </body>
-            <script>
-                // // Get the modal
-                //     var modal = document.getElementById('myModal');
-        
-                //     // Get the image and insert it inside the modal - use its "alt" text as a caption
-                //     var img = document.getElementById('myImg');
-                //     var modalImg = document.getElementById("img01");
-                //     var captionText = document.getElementById("caption");
-                //     img.onclick = function () {
-                //         modal.style.display = "block";
-                //         modalImg.src = this.src;
-                //         captionText.innerHTML = this.alt;
-                //     }
-        
-                //     // Get the <span> element that closes the modal
-                //     var span = document.getElementsByClassName("close")[0];
-        
-                //     // When the user clicks on <span> (x), close the modal
-                //     span.onclick = function () {
-                //         modal.style.display = "none";
-                //     }
-            </script>
 </html>
