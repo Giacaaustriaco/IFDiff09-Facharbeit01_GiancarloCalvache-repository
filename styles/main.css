@@ -117,21 +117,41 @@ nav a:hover{
     z-index: 1;
     top:0;
     left: 0;
-    background-color: #111;
+    background-color: rgb(71, 71, 71);
     overflow: hidden;
     padding-top: 20px;
+  }
+
+  .Side-Navigation ul {
+    list-style-type: none;
+    padding:0;
+  }
+
+  .Side-Navigation h1 {
+    border-bottom: 2px solid gray;
+    padding-bottom: 0.5em;
+  }
+
+  .Side-Navigation h2 {
+    padding: 0.5em 0;
+    border-bottom: 2px dotted gray;
   }
   
   .Side-Navigation a{
     padding:1em 0.5em;
     text-decoration: none;
     font-size: medium;
-    color: #818181;
     display: block;
   }
+  
+  .Side-Navigation h1, a, h2 {
+    color: #818181;
+    text-align: center;
+  }
 
-  .Side-Navigation a:hover {
-    color: #f1f1f1;
+  .Side-Navigation li:hover {
+    background-color: rgb(53, 52, 52);
+    color: white;
   }
 
 .Main-Content {
@@ -139,9 +159,93 @@ nav a:hover{
   position: relative;
   /* float: right; */
 }
+article {
+  padding: 1em;
+  /* border: 2px solid blueviolet; */
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+article h1 {
+  background-color: hsl(180, 25%, 25%, 80%);
+  color: white;
+  padding: 0.5em;
+  margin-bottom: 10px;
+}
+
+article h2 {
+  background-color: rgba(47, 79, 79, 0.575);
+  color: white;
+  padding: 0.5em;
+  margin-bottom: 10px;
+}
+
 article p {
+  display: block;
+  /* border: 2px solid black; */
   padding: 0 5em;
   text-align: justify;
+  margin: 1em 0;
+}
+
+article .image-background {
+  background-color: dimgray;
+  width: fit-content;
+  margin: auto;
+  display: block;
+  border: 2px solid gray;
+  border-radius: 20px;
+}
+
+article .image-background img {
+  padding: 1em;
+}
+
+article img {
+  max-width: 100%;
+  margin: 5px auto;
+  display: block;
+}
+
+article p img {
+  clear: none;
+  float: left;
+  width: 100px;
+  margin:0 1em 0 0;
+  border: 1px solid dimgray;
+  border-style: groove;
+}
+
+q {
+  display: block;
+  padding: 0.5em;
+  font-family: 'Lobster', cursive;
+  clear: both;
+}
+
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.info {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.warning {
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
 }
 
 .tooltip {
