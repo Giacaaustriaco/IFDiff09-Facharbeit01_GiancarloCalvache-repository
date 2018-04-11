@@ -1,18 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/main.css">
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Parteien</title>
+    <style>
+        /* .profile-info {
+            background-color: gray;
+            color: white;
+        } */
+        
+        #CDUCSU {
+            background-color: grey;
+        }
+        
+        #SPD {
+            background-color: lightcoral;
+        }
+        
+        #FDP {
+            background-color: khaki;
+        }
+        
+        #CDUCSU,
+        #SPD,
+        #FDP {
+            color: white;
+        }
+        
+        #Linke , #Linke h1{
+            color: black;
+        }
+
+        #Linke img {
+            border: 2px solid black;
+            Padding: 1em;
+        }
+
+        #Grüne {
+            background-color:rgba(19, 139, 93, 0.692);
+        }
+
+        #AFD {
+            background-color:skyblue;
+        }
+        
+        .profile-info h1 {
+            background-color: inherit;
+            text-align: left;
+            padding: 0.5em 0em 0.5em 1.5em;
+            font-size: 3vw;
+        }
+
+        .profile-info img {
+            display: block;
+            /* border: 2px solid white; */
+            margin: 0 0 0 10%;
+            width: 30vw;
+        }
+
+        .profile-info p {
+            text-align: center;
+            padding: 0;
+            position: relative;
+        }
+
+        .profile-content {
+            width: 50%;
+            margin: 0;
+            padding: 1em;
+        }
+
+        section {
+            margin: 1em 0;
+        }
+
+        section img:hover {
+            opacity: 0.5;
+        }
+
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>Parteien Deutschlands</h1>
+        <h1 class="Main-Header">Parteien Deutschlands</h1>
     </header>
     <!--Navigation-->
     <nav>
@@ -39,13 +116,174 @@
             </li>
         </ul>
     </nav>
-    <main>
-        <article id="Einleitung">
-            
-        </article>
+    <main class="col-12">
+        <div class="Main-Content">
+            <div class="Side-Navigation">
+                <ul>
+                    <h1>Parteien</h1>
+                    <li></li>
+                </ul>
+            </div>
+            <article id="Einleitung">
+                <p>
+                    In der modernen Massendemokratie kann der Bürger den Entscheidungsprozess in der Politik für sich allein nicht beeinflussen.
+                    Aus diesem Grund vollzieht sich die politische Beteiligung über die Mitarbeit in Interessens Gruppen,
+                    sogenannten Parteien, das sind Gruppierungen von Interessenten, die Stellvertretend für die Interessen
+                    ihrer Wählerschaft im Bundestag eintreten. Dadurch werden viel mehr Bürger angesprochen. Je größer diese
+                    ist, desto größer ihre Machtfülle. Es ist deswegen umstritten, dass Parteien im politischen System Deutschland
+                    eine zentrale Rolle spielen. Die parlamentarische Demokratie mit dem Bundestag begünstigen jedoch ein
+                    starkes Einwirken der Partei, unter anderem, weil keine andere Organisation alle drei Bereiche des politischen
+                    Systems abdeckt. Nicht umsonst wird Deutschland eine parlamentarische Demokratie genannt.
+                </p>
+                <button class="collapsible">Funktionen der Parteien</button>
+                <div class="content">
+                    <ul>
+                        <li>Interessenartikulationsfunktion: Vorstellungen und Interessen im Rahmen des politischen Diskussionsprozesses
+                            zum Ausdruck bringen</li>
+                        <li>Interessenaggregationsfunktion: Bündelung von Interessen zu Konzepten</li>
+                        <li>Interessentransmissionsfunktion: In der Öffeltlichkeit für ihre Vorstellungen werben. Politische
+                            Wünsche, Positionen und Bedürfnisse zum Ausdruck bringen</li>
+                        <li>Partizipationsfunktion: BürgernInnen die Gelegenheit bieten, sich aktiv politisch zu betätigen</li>
+                        <li>Integrationsfunktion: Stellen der Kandidaten für die Volksvertretungen im Bund, Ländern und Gemeinden,
+                            genau sowie Führungspersonal</li>
+                        <li>Informationsvermittlungsfunktion: Vermittlung von Informationen durch Medien</li>
+                        <li>Herrschaftsfunktion: Politische Führung unterstützen</li>
+                        <li>Legitimationsfunktion: Kontrolle, Kritik an der Regierung, um die Legitimität des politischen Systems
+                            zu gewährleisten</li>
+                    </ul>
+                </div>
+                <button class="collapsible">Grundsätze des Parteisystems</button>
+                <div class="content">
+                    <ul>
+                        <li>Mehrparteienprinzip: Art. 21 des Grundgesetzes schließt das Einparteiensystem aus.</li>
+                        <li>Parteienfreiheit: Jeder Bürger kann eine Partei gründen.</li>
+                        <li>Chancengleichheit: Jede Partei kann an Wahlen teilnehmen und Wahlwerbung betreiben. Dafür muss sie
+                            beispielsweise – je nach ihrem politischen Gewicht unterschiedlich lange – Sendezeiten im öffentlichen
+                            Fernsehen erhalten, auf Sichtwänden plakatieren und öffentliche Räume für Wahlveranstaltungen
+                            nutzen können.</li>
+                        <li>Innerparteiliche Demokratie: Sie ist nur für Parteien vorgeschrieben, nicht aber für alle anderen
+                            Vereinigungen. Alle Entscheidungen müssen von den Parteimitgliedern oder durch von Parteimitgliedern
+                            gewählte Delegierte in Wahlen und Abstimmungen getroffen werden. Parteiämter müssen jeweils für
+                            zwei Jahre in geheimer Wahl besetzt werden. Alle Mitglieder haben gleiches Stimmrecht.</li>
+                        <li>Finanzielle Rechenschaftslegung: Parteien müssen, wiederum anders als alle anderen Vereinigungen,
+                            über ihre Einnahmen und Ausgaben öffentlich Rechenschaft ablegen.</li>
+                    </ul>
+                </div>
+            </article>
+            <article id="Parteien-Deutschlands">
+                <section id="CDUCSU">
+                    <div class="profile-info">
+                        <header>
+                            <h1>CDU/CSU</h1>
+                        </header>
+                        <div class="flex-wrap">
+                            <div class="profile-content">
+                                <a href="https://www.cdu.de/">
+                                    <img src="images/Parteien/CDUCSU_Sharing_Snippet_20171206.png" alt="">
+                                </a>
+                            </div>
+                            <div class="profile-content">
+                                <p>Die CDU/CSU ist gemessen an den Wahlerfolgen und der Dauer ihrer Regierungsbeteiligungen
+                                    im Bund, die erfolgsreichste Partei in der Bundesrepublik Deutschland. Sie wurde 1945
+                                    mit dem Zweck gegründet alle christlich orientierten Kräfte in einer Union zu vereinigen
+                                    und einen Staat auf Grundlage menschlicher und christlicher Werte zu bauen. Die Volkspartei
+                                    gilt als „neutral“ und umfasst Konservatives, Soziales und Liberales. </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- SPD -->
+                <hr>
+                <section id="SPD">
+                    <div class="profile-info">
+                        <header>
+                            <h1>SPD</h1>
+                        </header>
+                        <div class="flex-wrap">
+                            <div class="profile-content">
+                                <img src="images/Parteien/2000px-SPD_logo.svg.png" alt="">
+                            </div>
+                            <div class="profile-content">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FDP -->
+                <hr>
+                <section id="FDP">
+                    <div class="profile-info">
+                        <header>
+                            <h1>FDP</h1>
+                        </header>
+                        <div class="flex-wrap">
+                            <div class="profile-content">
+                                <img src="images/Parteien/FDP_Logo_Fb.png" alt="">
+                            </div>
+                            <div class="profile-content">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- linke -->
+                <hr>
+                <section id="Linke">
+                    <div class="profile-info">
+                        <header>
+                            <h1>Die Linke</h1>
+                        </header>
+                        <div class="flex-wrap">
+                            <div class="profile-content">
+                                <img src="images/Parteien/2000px-Die_Linke_logo.svg.png" alt="">
+                            </div>
+                            <div class="profile-content">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Grünen -->
+                <hr>
+                <section id="Grüne">
+                    <div class="profile-info">
+                        <header>
+                            <h1>Bündnis90/Die Grünen</h1>
+                        </header>
+                        <div class="flex-wrap">
+                            <div class="profile-content">
+                                <img src="images/Parteien/download.png" alt="">
+                            </div>
+                            <div class="profile-content">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- AFD -->
+                <hr>
+                <section id="AFD">
+                    <div class="profile-info">
+                        <header>
+                            <h1>AFD</h1>
+                        </header>
+                        <div class="flex-wrap">
+                            <div class="profile-content">
+                                <img src="images/Parteien/AfD-Logo-2017.svg" alt="">
+                            </div>
+                            <div class="profile-content">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
     </main>
+    <script src="Collapsible.js"></script>
     <footer>
 
     </footer>
 </body>
+
 </html>

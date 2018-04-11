@@ -100,10 +100,14 @@ nav a:hover{
     background-color: #111;
   }
   
-  nav .active {
-    color: white;
-    background-color: rgb(47, 255, 64, 0.7);
-  }
+nav .active {
+  color: white;
+  background-color: rgb(47, 255, 64, 0.7);
+}
+
+main {
+  width:100%;
+}
   
   /* Damit der Container dem Bild angeglichen wird*/
   .clearfix {
@@ -202,6 +206,13 @@ article .image-background {
 
 article .image-background img {
   padding: 1em;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 article img {
