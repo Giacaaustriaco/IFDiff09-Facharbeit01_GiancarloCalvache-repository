@@ -26,16 +26,12 @@
     <!-- <nav class="col-s-12 col-12">
         <iframe src="Navigation.html" frameborder="0"></iframe>
     </nav> -->
-    <nav class="col-10">
+    <nav>
+        <!-- Diese Col- Klassen legen eine bestimmte Breite fest. Ich habe meine Website in 12 regelmäßigen Spalten eingegliedert. Bei col-12 wird z.B. die Breite auf 100% also hindurch alle Spalten erstrecjt -->
+        <!-- Ich habe zur erstellung dieser Navigation eine ungeordnete liste erstellt mit Listen Elementen die als Links fungieren. Mehreres bei main.css -->
         <ul class="col-12">
             <li class="col-2">
-                <a href="#Container-Aktuelles">Aktuelles</a>
-            </li>
-            <li class="col-2">
-                <a href="#Container-Soziales">Soziales</a>
-            </li>
-            <li class="col-2">
-                <a href="#Container-Wirtschaft">Wirtschaft</a>
+                <a href="Wahlen.html">Wahlen</a>
             </li>
             <li class="col-2">
                 <a href="Parteien.html">Parteien</a>
@@ -45,12 +41,15 @@
             </li>
             <li style="float:left" class="active col-2">
                 <a href="index.html">
+                    <!-- Einfügen des Home-Icons aus Google´s material-icons stylesheet -->
+                    <!-- Font-size bestimmt die Größe des Icons -->
                     <i class="material-icons" style="font-size: 19px">home</i>
                 </a>
             </li>
         </ul>
     </nav>
     <main class="col-12">
+        <!-- Einteilung der Seitennavigation -->
         <div class="Side-Navigation col-2">
             <ul>
                 <h1>Demokratie</h1>
@@ -67,7 +66,6 @@
                 <li>
                     <a href="">Reformen unter </a>
                 </li>
-                <h2>Demokratie in Deutschland</h2>
             </ul>
         </div>
 
@@ -79,10 +77,6 @@
                     <header>
                         <h1><q>Staatsgewalt geht vom Volke aus</q></h1>
                     </header>
-                    <!-- <p>So heißt es nach Artikel 20 Absatz 1 des Grundgesetzes. Der Begriff Demokratie kommt aus dem Griechischem und bedeutet übersetzt
-                    „Herrschaft des Volkes“. Vorläufer der modernen Demokratie entstanden in Rom und Athen als Reaktion auf zu große Machfülle
-                    und Machtmissbrauch der Herrscher. Allerdings wurden erst im 17./18. Jahrhundert die wesentlichen Elemente einer Demokratie
-                    verfasst. Damit eine Staatsform heutzutage den Namen „Demokratie“ muss sie grundlegende Kriterien erfüllen:</p> -->
                     <p>„Die Macht geht vom Volke aus“. Demokratie ist eine Herrschaftsform, bei der politische Macht durch das Volk ausgeübt wird.
                     Der Begriff setzt sich aus den griechischen Wörtern „Demos“ für „Staatsvolk“ und „Kratos“ für „Herrschaft“ zusammen, was
                     wörtlich übersetzt „Herrschaft des Volkes“ lautet. Doch leider hilft dieser Ausdruck wenig weiter, zumal sich mittlerweile
@@ -108,6 +102,7 @@
                     eine vierte Welle demokratischer Umstrukturierung zu. Die entsprechenden Ansätze entwickelten sich jedoch unterschiedlich.
                     Vielerorts wurden Demokratiesierungsprozesse gestoppt oder durch neune autoritäre Regierungsformen ersetzt.</p>
                     <!-- Anforderungen -->
+                    <!-- Aufklapp texte -->
                     <p>Falls ein Staat als „moderne Demokratie“ klassifiziert werden möchte, muss dieser Folgende Grundanforderungen erfüllen:</p>
                     <button class="collapsible">Grundklassifizierung einer modernen Demokratie</button>
                     <div class="content">
@@ -145,6 +140,7 @@
                 <li>Gottesstaat</li>
             </ul> -->
             <!--Sektion: Demokratie in der Antike-->
+            <!-- Artikel ist in Sektionen aufgeteilt und zwar mit den jeweiligen Themen -->
             <article id="Demokratie-Antike">
                 <header>
                     <h1>Demokratie in der Antike</h1>
@@ -152,6 +148,8 @@
                 <!-- Ursprung der Demokratie bzw. des Demokratischen Denkens/attische Demokratie-->
                 <section id="Demokratie-Ursprung">
                     <!-- <h1></h1> -->
+                    <!-- Aufstände in Griechenland -->
+                    <h1>Aufstände im 7./8. Jahrhundert</h1>
                     <img src="images/Demokratie-Geschichte/GriechischeStämme.jpg" alt="Karte von Griechenland unterteilt in Griechischen Stämmen">
                     <h2>Lage in Griechenland während des 7./8.Jahrhunderts</h2>
                     <p>Demokratie hat seinen Ursprung im sechsten Jahrhundert v. Chr. In Athen. Die heutige Hauptstadt Griechenlands war damals
@@ -231,7 +229,7 @@
                     </P>
                     <p>Fazit: Die Demokratie in Athen lässt sich nur bedingt mit der modernen Demokratie vergleichen. Trotzdem sind ihr drei wesentliche Punkte mit dieser gemeinsam: Entstand als Reaktion auf übergroße Machtfülle und Machtmissbrauch, die Wichtigste Aufgabe der Demokratie ist die Gewaltenteilung, die Gefahr dorht mehr zu versprechen, als realistisch ist</p>
                 </section>
-                <!-- Zusammenfassung/Leitfaden -->
+                <!-- Zusammenfassung/Leitfaden der Geschichte-->
                 <!-- Schön ware es die Zusammenfassung mit einem Parralax zu kombinieren, dann könnte man je nach artikel das Genaue datum sehen. Es würde sich perfekt als Hintergrund eignen. -->
                 <div id="summary">
                     <div class="timeline">

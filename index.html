@@ -2,21 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- Titel der Website -->
     <title>POLITIK | Startseite</title>
     <!--Website passt sich der größe des Bildschirmes eines Gerätes an-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Kompabilität mit Älteren Edge Browsern -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Hyperlink wird zur Haupt CSS-Datei erstellt-->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Google Icons-->
+    <!-- Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!--Bootstrap Icons-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-    <!-- Font awesome Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Lobster font-->
+    <!--Schriftarten-->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -28,7 +27,6 @@
         padding: 1.5em 0.5em;
         color: white;
         font-size: 3em;
-        /* font-family: "Permanent Marker" cursive;  */
       }
 
       nav {
@@ -36,12 +34,13 @@
         width: 100%;
       }
 
+      /* Diese ID ist für den Header der Website, um dem Titel ein Hintergrundbild zu verleihen */
       #Title-Image {
-        /*background-color: rgba(130, 0, 206, 0.3);*/
         background-image: url("images/Startseite/ParlamentsGebäude.jpg");
         background-repeat: no-repeat;
         font-family: 'Permanent Marker', cursive;
       }
+
       a.button-cust {
         color: white;
         background-color: rgba(255, 255, 255, 0);
@@ -60,15 +59,31 @@
         font-size: 0.7em;
       }
 
+      /* Falls der Mauszeiger über die Schaltfläche fährt, ändert sich deren Form. Hier ändert sich die Hintergrundfarbe und der Rand */
       a.button-cust:hover {
         background-color: rgba(128, 128, 128, 0.747);
         color: white;
         border: none;
       }
+        .Flex-Container-Wrap {
+          display: flex;
+          flex-flow: row wrap;
+          margin: 0;
+          padding: 0;
+        }
+  
+        .Flex-Child {
+          margin: auto; /*Margin Werte passen sich automatisch an*/
+          background-color: tomato;
+          width: 33.33%;
+          height: 270px;
+          text-align: center;
+          line-height: 270px;
+        }
 
       .Container-Demokratie .Right p q {
         text-align: center;
-        position: absolute;
+        position: absolute; /*Damit ich den Paragraphen verschieben kann, muss ich ihn mit einer absoluten Position und gleichzeitig den übergeordneten mit einer Relativen Position versehen, um diesen zu Zentrieren*/
         top:50%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
@@ -77,26 +92,12 @@
         font-size: small;
       }
 
-      .Flex-Container-Wrap {
-        display: flex;
-        flex-flow: row wrap;
-        margin: 0;
-        padding: 0;
-      }
-
-      .Flex-Child {
-        margin: auto;
-        background-color: tomato;
-        width: 33.33%;
-        height: 270px;
-        text-align: center;
-        line-height: 270px;
-      }
-        
+        /* Bestimmung der Höhe des Demokratie Berreiches */
         .Container-Demokratie {
           height: 720px;
         }
 
+        /* Für die Linke Seite, die ich später mit einem Button versehen werde, füge ich ein Hintergrundbild ein */
         .Container-Demokratie .Left {
           height: inherit;
           position: relative;
@@ -104,6 +105,7 @@
           background-image: url("images/Startseite/maxresdefault.jpg");
         }
         
+        /* Beim Rechten Teich jedoch soll ein zentriertes Zitat stehen */
         .Container-Demokratie .Right {
           background-color: bisque;
           justify-content: center;
@@ -111,27 +113,29 @@
           vertical-align: middle;
         }
         
+
         .Container-Demokratie .Title {
-          position: absolute;
-          top: 30%;
-          right: 50%;
+          position: absolute; /*Container soll sich dem Übergeordneten zufolge umstellen*/
+          top: 30%; /*Er soll sich vom unteren Rand des Containers, auf einer Höher von 70% des Containers befinden*/
+          right: 50%; /* Wird auf die Hälfte der Seite gesetzt. Der Titel wird also so positioniert, dass er sich horizontal aus gesehen auf der Hälfte der Breite des Containers liegt*/
           -webkit-transform: translateX(50%);
           -ms-transform: translateX(50%);
           -moz-transform: translateX(50%);
-          transform:translateX(50%);
+          transform:translateX(50%); /*Der Punkt an dem sich der Text orientiert wird um die Hälfte des Titel-Elements verschoben, sodass es sich genau mittig befindet*/
           color: white;
         }
 
+        /* verschiedene Schriftzeichen für jeweilige Überschriften setzten */
           .Container-Demokratie h1.Title {
           font-size: 3em;
           font-family: 'Vidaloka', serif;
         }
 
         .Container-Demokratie h2.Title {
-          /*font-size: 1em;*/
           font-family: 'Oswald', sans-serif;
         }
         
+        /* Höhe des Partaien-Bereiches auf 540 pixeln setzten */
         .Container-Parteien {
           height:540px;
         }
@@ -155,26 +159,19 @@
           position: absolute;
           z-index: -1;
         }
-        
-        #Container-Wirtschaft {
-          height: 450px;
-          background-color: gold;
+
+        .Container-Wahlen {
+          width: 100%;
+          background-image: url('images/Rest/hey.jpg');
+          background-repeat: no-repeat;
         }
-        
-        #Container-Soziales {
-          height: 470px;
-        background-color: deepskyblue;
-        }
-      
-        #Container-Aktuelles {
-          height:800px;
-          background-color:darkorchid;
-        }
+
         .Center-Container {
             position: relative;
             height: 100%;
         }
 
+        /* Dient zur Zentrierung eines Elementes auf X und Y achse */
         .Absolute-Center {
           width: 50%;
           height: 50%;
@@ -183,6 +180,8 @@
           position: absolute;
           top: 0; left: 0; bottom: 0; right: 0;
         }
+
+        /*Elemente/Klassen bzw. dessen Attribute sollen je nach größe des Bilschirmes andere werte haben*/
           @media only screen and (min-width: 424px) {
             header h1 {font-size: 5em;}
             .Container-Demokratie .Right p q {font-size: small;}
@@ -205,25 +204,20 @@
       </style>
   </head>
   <body>
+    <!-- Den Body habe ich in drei Bereiche eingeteilt. Einen für den Titel bzw. die Kopfnote mithilfe der header Tags. Einen mit Main-Tags ummschlossenen Berreich, in dem der Hauptkontent liegt und einen Teil für die Fußnote -->
+    <!-- die Kopfnote Wohin der Überschrift und das Hintergrundbildkommt -->
     <header>
       <div id="Title-Image">
         <h1>POLITIK</h1>
       </div>
     </header>
-    <!--Navigation-->
-    <!-- <nav>
-      <iframe src="Navigation.html" frameborder="0"></iframe>
-    </nav> -->
+    <!-- Navigationsleiste -->
     <nav>
+      <!-- Diese Col- Klassen legen eine bestimmte Breite fest. Ich habe meine Website in 12 regelmäßigen Spalten eingegliedert. Bei col-12 wird z.B. die Breite auf 100% also hindurch alle Spalten erstrecjt -->
+      <!-- Ich habe zur erstellung dieser Navigation eine ungeordnete liste erstellt mit Listen Elementen die als Links fungieren. Mehreres bei main.css -->
       <ul class="col-12">
         <li class="col-2">
-          <a href="#Container-Aktuelles">Aktuelles</a>
-        </li>
-        <li class="col-2">
-          <a href="#Container-Soziales">Soziales</a>
-        </li>
-        <li class="col-2">
-          <a href="#Container-Wirtschaft">Wirtschaft</a>
+          <a href="Wahlen.html">Wahlen</a>
         </li>
         <li class="col-2">
           <a href="Parteien.html">Parteien</a>
@@ -233,27 +227,35 @@
         </li>
         <li style="float:left" class="active col-2">
           <a href="index.html">
+            <!-- Einfügen des Home-Icons aus Google´s material-icons stylesheet -->
+            <!-- Font-size bestimmt die Größe des Icons -->
             <i class="material-icons" style="font-size: 19px">home</i>
           </a>
         </li>
       </ul>
     </nav>
+    <!-- Hauptteil -->
     <main class="col-s-12 col-12">
+
       <div class="Container-Demokratie Flex-Container-Wrap">
+        <!-- hier habe ich wiederum die breite manuell eingetragen, weil sie ihre Struktur behalten sollen und nicht wie bei der Navigation, die listen elemente so vergrößertm dass sie sich nicht mehr in einer Zeile befinden, sondern über mehrere Hinweggehen -->
         <div class="Left" style="width: 50%;">
           <h1 class="Title">Demokratie!</h1>
+          <!-- Manuelles Stylen der Titel bzw Schlagworte. Sie sollen sich von einander unterscheiden. -->
           <h2 class="Title" style="margin-top:3em;">Von der <span style="font-family: 'Inknut Antiqua', serif;"> Antike </span>bis hin zur <span style="font-family: 'Orbitron', sans-serif;">Neuzeit</span></h2>
-          <a href="Demokratie.html" class="button-cust">
+          <a href="Demokratie.html" class="button-cust"> <!--Link wird Dekoriert und agiert als ein Button-->
             Mehr erfahren
           </a>
         </div>
         <div class="Right Center-Container" style="width:50%;">
+          <!-- Die oben genannte absolute Zentrierung -->
           <div class="Absolute-Center" style="width:100%; font-size:xx-small;">
             <p><q>Demokratie beruht auf drei Prinzipien: auf der Freiheit des Gewissens, aus der Freiheit der Rede und auf der Klugkeit, keine der Zwei in Anspruch zu nehmen</q></p>
           </div>
         </div>
        </div>
-      <div class="Container-Parteien Flex-Container-Wrap">
+
+      <!-- <div class="Container-Parteien Flex-Container-Wrap" style="background-image:url('images/Startseite/Parteien.jpg'); background-repeat:no-repeat;"> -->
         <div class="Left" style="width:50%;">
           <ul class="Flex-Container-Wrap" style="list-style-type:none; padding:0; margin:0;">
             <li class="Flex-Child"><img src="" alt="">1</li>
@@ -267,19 +269,16 @@
         <div class="Right" style="width:50%">
           <div class="Center-Container">
             <div class="Absolute-Center">
-              <h1 style="transform:translateY(50%);font-family:'Mate SC', serif; font-size:6em; ">Parteien</h1> <!--border:crimson 2px solid-->
+              <h1 style="transform:translateY(50%);font-family:'Mate SC', serif; font-size:6em; ">Parteien</h1>
             </div>
           </div>
         </div>
       </div>
-      <div id="Container-Wirtschaft">
-      
-      </div>
-      <div id="Container-Soziales">
-      
-      </div>
-      <div id="Container-Aktuelles">
-      
+
+      <!-- <div class="Container-Wahlen">
+        <h1>Wahlen</h1>
+
+      </div> -->
       </div>
     </main>
     <footer class="col-s-12 col-12">

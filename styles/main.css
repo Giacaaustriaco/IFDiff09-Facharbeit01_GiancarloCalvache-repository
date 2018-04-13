@@ -6,6 +6,7 @@
   margin: 0;
 }
 /* Handys*/
+/* Die breite der Elemente ist in Collums eingeteilt */
 [class*="col-"] {
   width: 100%;
 }
@@ -336,16 +337,16 @@ header, footer {
   nav li {width: auto;}
 }
 
-/* TIMELINE */
+/* Zeitleiste */
+/* Für die Geschichtlichen Aspekte habe ich vor eine Zeitleiste zu machen, die die wesentlichen Ereignisse Kurz zusammenfasst */
 
-/* The actual timeline (the vertical ruler) */
+/* Die eigentliche Zeitleiste */
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -357,7 +358,7 @@ header, footer {
   margin-left: -3px;
 }
 
-/* Container around content */
+/* Container der den Kontent umschließt */
 .container-timeline {
   padding: 10px 40px;
   position: relative;
@@ -365,7 +366,7 @@ header, footer {
   width: 50%;
 }
 
-/* The circles on the timeline */
+/* Die kreise auf der Zeitleiste */
 .container-timeline::after {
   content: '';
   position: absolute;
@@ -379,17 +380,17 @@ header, footer {
   z-index: 1;
 }
 
-/* Place the container to the left */
+/* setzt einen Container nach links */
 .left {
   left: 0;
 }
 
-/* Place the container to the right */
+/* Verlegt den Container nach rechts */
 .right {
   left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
+/* Versehen Container mit Pfeilen*/
 .left::before {
   content: " ";
   height: 0;
@@ -403,7 +404,6 @@ header, footer {
   border-color: transparent transparent transparent white;
 }
 
-/* Add arrows to the right container (pointing left) */
 .right::before {
   content: " ";
   height: 0;
@@ -417,12 +417,12 @@ header, footer {
   border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
+/* Korrigiert die Kreise auf der Rechten Seite */
 .right::after {
   left: -16px;
 }
 
-/* The actual content */
+/* Kontent der Zeitleiste */
 .timeline-content {
   padding: 20px 30px;
   background-color: white;
@@ -444,7 +444,7 @@ header, footer {
     padding-right: 25px;
   }
 
-/* Make sure that all arrows are pointing leftwards */
+  /* Stellt sicher, dass alle Pfeile nach links zeigen */
   .container-timeline::before {
     left: 60px;
     border: medium solid white;
@@ -452,19 +452,19 @@ header, footer {
     border-color: transparent white transparent transparent;
   }
 
-/* Make sure all circles are at the same spot */
+  /* Alle Kreise stehen in einer Geraden linie */
   .left::after, .right::after {
     left: 15px;
   }
 
-/* Make all right containers behave like the left ones */
+/* Lässt die Rechten Container sich genauso wie die linken Verhalten  */
   .right {
     left: 0%;
   }
 }
 
 /* Collapsible */
-/* Style the button that is used to open and close the collapsible content */
+/* Verleiht den Button den man Verwendet um die Liste aufzuklappen ein Design */
 .collapsible {
   background-color: #eee;
   color: #444;
@@ -477,12 +477,12 @@ header, footer {
   font-size: 15px;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* setzt Hintergrund farbe des Button falls sich die Maus über ihm befindet */
 .active-collapsible, .collapsible:hover {
   background-color: #ccc;
 }
 
-/* Style the collapsible content. Note: hidden by default */
+/* Verleiht dem Kontent ein Design */
 .content {
   padding: 0 18px;
   display: none;
@@ -491,7 +491,7 @@ header, footer {
 }
 
 .collapsible::after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    content: '\02795'; /* Unicode für "plus" Zeichen (+) */
     font-size: 13px;
     color: white;
     float: right;
@@ -499,5 +499,5 @@ header, footer {
 }
 
 .active-collapsible::after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    content: "\2796"; /* Unicode for "minus" zeichen (-) */
 }
